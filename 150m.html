@@ -1,0 +1,768 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    
+    <style>
+    
+    #panorama {
+        width: 90vw;
+        height: 100%;
+        border-radius:12px;
+    }
+    
+    </style>
+
+<div id="panorama"></div>
+
+<script>
+
+if(window.innerWidth<800){
+    fow=80;
+}else{
+    fow=200;
+}
+
+viewer = pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "2",
+        "sceneFadeDuration": 1000,
+        "autoLoad": true,
+        "mouseZoom": false,
+        "compass": true,
+        "autoRotate": -2,
+        "autoRotateInactivityDelay":2500, 
+        //"orientationOnByDefault": true,
+        "friction": 0.2,
+        //"minPitch":-61,
+        //"maxPitch":90
+        
+       
+    },
+     "scenes": {
+        "1": {
+            "title": "Podjazd",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/1.jpg",
+            "northOffset": 165,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 5,
+                    "type": "scene",
+                    "text": "Drzwi wejściowe",
+                    "sceneId": "2",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                {
+                    "pitch": -15,
+                    "yaw": -70,
+                    "type": "scene",
+                    "text": "Ogródek 1",
+                    "sceneId": "18",
+                    "cssClass": "custom-hotspot",
+                }
+                 ]
+        },
+        "2": {
+            "title": "Drzwi wejściowe",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/2.jpg",
+            "northOffset": 135,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": -160,
+                    "type": "scene",
+                    "text": "Podjazd",
+                    "sceneId": "1",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                {
+                    "pitch": -15,
+                    "yaw": -80,
+                    "type": "scene",
+                    "text": "Ogródek 1",
+                    "sceneId": "18",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": 35,
+                    "type": "scene",
+                    "text": "Przedsionek",
+                    "sceneId": "3",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                 ]
+        },
+         "3": {
+            "title": "Przedsionek",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/3.jpg",
+            "northOffset": 220,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 50,
+                    "type": "scene",
+                    "text": "Garaż",
+                    "sceneId": "4",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                {
+                    "pitch": -15,
+                    "yaw": -50,
+                    "type": "scene",
+                    "text": "Korytarz 1",
+                    "sceneId": "5",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": 120,
+                    "type": "scene",
+                    "text": "Drzwi wejściowe",
+                    "sceneId": "2",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 ]
+        },
+
+           "4": {
+            "title": "Garaż",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -15,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/4.jpg",
+            "northOffset": 20,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 70,
+                    "type": "scene",
+                    "text": "Przedsionek",
+                    "sceneId": "3",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 ]
+        },
+         "5": {
+            "title": "Korytarz 1",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/5.jpg",
+            "northOffset": -30,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": -60,
+                    "type": "scene",
+                    "text": "Łazienka 1",
+                    "sceneId": "6",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                {
+                    "pitch": -15,
+                    "yaw": -95,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "13",
+                    "cssClass": "custom-hotspot",
+              
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": -155,
+                    "type": "scene",
+                    "text": "Korytarz 2",
+                    "sceneId": "8",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": -195,
+                    "type": "scene",
+                    "text": "Gabinet",
+                    "sceneId": "7",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": 30,
+                    "type": "scene",
+                    "text": "Przedsionek",
+                    "sceneId": "3",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 ]
+        },
+          "6": {
+            "title": "Łazienka 1",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/6.jpg",
+            "northOffset": -60,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 130,
+                    "type": "scene",
+                    "text": "Korytarz 1",
+                    "sceneId": "5",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 ]
+        },
+         "7": {
+            "title": "Gabinet",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/7.jpg",
+            "northOffset": 100,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 125,
+                    "type": "scene",
+                    "text": "Korytarz 1",
+                    "sceneId": "5",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 ]
+        },
+
+         "8": {
+            "title": "Korytarz 2",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/8.jpg",
+            "northOffset": -70,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 50,
+                    "type": "scene",
+                    "text": "Korytarz 1",
+                    "sceneId": "5",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                {
+                    "pitch": -15,
+                    "yaw": 130,
+                    "type": "scene",
+                    "text": "Kuchnia",
+                    "sceneId": "9",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": -120,
+                    "type": "scene",
+                    "text": "Salon",
+                    "sceneId": "10",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": -50,
+                    "type": "scene",
+                    "text": "Schowek",
+                    "sceneId": "11",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 ]
+        },
+         "9": {
+            "title": "Kuchnia",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/9.jpg",
+            "northOffset": -80,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": -20,
+                    "type": "scene",
+                    "text": "Korytarz 2",
+                    "sceneId": "8",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": -95,
+                    "type": "scene",
+                    "text": "Salon",
+                    "sceneId": "10",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 ]
+        },
+
+"10": {
+            "title": "Salon",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/10.jpg",
+            "northOffset": -15,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": -10,
+                    "type": "scene",
+                    "text": "Korytarz 2",
+                    "sceneId": "8",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": -140,
+                    "type": "scene",
+                    "text": "Taras",
+                    "sceneId": "21",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": 35,
+                    "type": "scene",
+                    "text": "Kuchnia",
+                    "sceneId": "9",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 ]
+        },
+"11": {
+            "title": "Schowek",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/11.jpg",
+            "northOffset": 130,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": -50,
+                    "type": "scene",
+                    "text": "Korytarz 2",
+                    "sceneId": "8",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": 140,
+                    "type": "scene",
+                    "text": "Pom. godpodarcze",
+                    "sceneId": "12",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 
+                 ]
+        },
+        "12": {
+            "title": "Pom. godpodarcze",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/12.jpg",
+            "northOffset": 80,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 70,
+                    "type": "scene",
+                    "text": "Wejście 2",
+                    "sceneId": "22",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": -20,
+                    "type": "scene",
+                    "text": "Schowek",
+                    "sceneId": "11",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 
+                 ]
+        },
+        "13": {
+            "title": "Korytarz na piętrze",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/13.jpg",
+            "northOffset": 10,
+            "hotSpots": [
+                {
+                    "pitch": -25,
+                    "yaw": -50,
+                    "type": "scene",
+                    "text": "Korytarz 1",
+                    "sceneId": "5",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": 110,
+                    "type": "scene",
+                    "text": "Pokój 1",
+                    "sceneId": "14",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": 70,
+                    "type": "scene",
+                    "text": "Pokój 2",
+                    "sceneId": "15",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": 15,
+                    "type": "scene",
+                    "text": "Łazienka 2",
+                    "sceneId": "16",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": -15,
+                    "type": "scene",
+                    "text": "Pokój 3",
+                    "sceneId": "17",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 ]
+        },
+"14": {
+            "title": "Pokój 1",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/14.jpg",
+            "northOffset": 215,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 145,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "13",
+                    "cssClass": "custom-hotspot",
+              
+                }               
+                 
+                 ]
+        },
+"15": {
+            "title": "Pokój 2",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/15.jpg",
+            "northOffset": 120,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 175,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "13",
+                    "cssClass": "custom-hotspot",
+                    
+                }               
+                 
+                 ]
+        },
+"16": {
+            "title": "Łazienka 2",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/16.jpg",
+            "northOffset": 150,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 130,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "13",
+                    "cssClass": "custom-hotspot",
+                   
+                }               
+                 
+                 ]
+        },
+  "17": {
+            "title": "Pokój 3",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/17.jpg",
+            "northOffset": 120,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 40,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "13",
+                    "cssClass": "custom-hotspot",
+                
+                }               
+                 
+                 ]
+        },
+
+"18": {
+            "title": "Ogródek 1",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/18.jpg",
+            "northOffset": 200,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 70,
+                    "type": "scene",
+                    "text": "Drzwi wejściowe",
+                    "sceneId": "2",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": -45,
+                    "type": "scene",
+                    "text": "Ogródek 2",
+                    "sceneId": "19",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 
+                 ]
+        },
+"19": {
+            "title": "Ogródek 2",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/19.jpg",
+            "northOffset": 130,
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": -180,
+                    "type": "scene",
+                    "text": "Taras",
+                    "sceneId": "21",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": 135,
+                    "type": "scene",
+                    "text": "Ogródek 3",
+                    "sceneId": "20",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -10,
+                    "yaw": -130,
+                    "type": "scene",
+                    "text": "Ogródek 1",
+                    "sceneId": "18",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 
+                 ]
+        },
+"20": {
+            "title": "Ogródek 2",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/20.jpg",
+            "northOffset": -5,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": -10,
+                    "type": "scene",
+                    "text": "Taras",
+                    "sceneId": "21",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": -40,
+                    "type": "scene",
+                    "text": "Wejście 2",
+                    "sceneId": "22",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": 85,
+                    "type": "scene",
+                    "text": "Ogródek 2",
+                    "sceneId": "19",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 
+                 ]
+        },
+"21": {
+            "title": "Taras",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/21.jpg",
+            "northOffset": 0,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": -25,
+                    "type": "scene",
+                    "text": "Salon",
+                    "sceneId": "10",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": -90,
+                    "type": "scene",
+                    "text": "Wejście 2",
+                    "sceneId": "22",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -15,
+                    "yaw": 100,
+                    "type": "scene",
+                    "text": "Ogródek 2",
+                    "sceneId": "19",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+                 {
+                    "pitch": -20,
+                    "yaw": -180,
+                    "type": "scene",
+                    "text": "Ogródek 3",
+                    "sceneId": "20",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 
+                 ]
+        },
+        "22": {
+            "title": "Wejście 2",
+            "hfov": fow,
+            "pitch": -10,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "https://nowa-bud.pl/assets/nowa-bud/spacer/falenty/22.jpg",
+            "northOffset": 10,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": -20,
+                    "type": "scene",
+                    "text": "Pom. godpodarcze",
+                    "sceneId": "12",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                },
+         
+                 {
+                    "pitch": -15,
+                    "yaw": 135,
+                    "type": "scene",
+                    "text": "Taras",
+                    "sceneId": "21",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth"
+                }
+                 
+                 ]
+        },
+    }
+});
+</script>
