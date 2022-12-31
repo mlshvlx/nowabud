@@ -1,5 +1,3 @@
-<script>
-
 if(window.innerWidth<800){
     fow=80;
 }else{
@@ -750,4 +748,3 @@ viewer = pannellum.viewer('panorama', {
         },
     }
 });
-</script>
