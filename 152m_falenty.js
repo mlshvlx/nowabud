@@ -1,31 +1,4 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
-    
-<style>
 
-   #panorama {
-    height: 80vh;
-    }
-    
-    .custom-hotspot {
-        height: 80px;
-        width: 80px;
-        background-image: url('https://nowa-bud.pl/assets/nowa-bud/Icons_cottage_pages/arrow_3d_3.svg');
-        background-repeat: no-repeat;
-        
-        filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
-        
-        box-shadow: 0 0 0 rgba(204,169,44, 0.4);
-    }    
-
-</style>
-
-
-<div id="panorama" style="position: relative; width:100%;" >
-
-</div>
-
-<script>
 
 if(window.innerWidth<800){
     fow=80;
@@ -777,4 +750,4 @@ viewer = pannellum.viewer('panorama', {
         },
     }
 });
-</script>
+
