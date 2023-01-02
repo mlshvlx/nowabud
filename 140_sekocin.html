@@ -1,0 +1,366 @@
+<script>
+
+if(window.innerWidth<800){
+    fow=80;
+}else{
+    fow=110;
+}
+
+
+viewer = pannellum.viewer('panorama', {   
+ "default": {
+        "firstScene": "2",
+        "sceneFadeDuration": 1000,
+        "autoLoad": true,
+        "mouseZoom": false,
+        "compass": true,
+        "autoRotate": -2,
+        "autoRotateInactivityDelay":2500, 
+        //"orientationOnByDefault": true,
+        "friction": 0.2,
+        },
+    
+    "scenes": {
+        "1": {
+            "title": "Salon",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "/assets/nowa-bud/spacer/140/salon_black_couch_v2_small.jpg",
+            "northOffset": -35,
+            "hotSpots": [
+                {
+                    "pitch": -7,
+                    "yaw": 15,
+                    "type": "scene",
+                    "text": "Kuchnia",
+                    "sceneId": "2",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                 {
+                    "pitch": -7,
+                    "yaw": -35,
+                    "type": "scene",
+                    "text": "Gabinet",
+                    "sceneId": "3",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -15,
+                    "yaw": -35,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "5",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -7,
+                    "yaw": -5,
+                    "type": "scene",
+                    "text": "Przedpokój",
+                    "sceneId": "4",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -7,
+                    "yaw": -20,
+                    "type": "scene",
+                    "text": "Łazienka",
+                    "sceneId": "11",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                 ]
+        },
+        
+        "2": {
+            "title": "Kuchnia",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "/assets/nowa-bud/spacer/140/kuchnia_black_couch_v2_small.jpg",
+            "northOffset": 190,
+            "hotSpots": [
+                {
+                    "pitch": -7,
+                    "yaw": -5,
+                    "type": "scene",
+                    "text": "Salon",
+                    "sceneId": "1",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                 {
+                    "pitch": -7,
+                    "yaw": 45,
+                    "type": "scene",
+                    "text": "Gabinet",
+                    "sceneId": "3",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -7,
+                    "yaw": 30,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "5",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -7,
+                    "yaw": 80,
+                    "type": "scene",
+                    "text": "Przedpokój",
+                    "sceneId": "4",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -7,
+                    "yaw": 60,
+                    "type": "scene",
+                    "text": "Łazienka",
+                    "sceneId": "11",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                 ]
+                 
+        },
+        "3": {
+            "title": "Gabinet",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "/assets/nowa-bud/spacer/140/gabinet_small.jpg",
+            "northOffset": 200,
+            "hotSpots": [
+                {
+                    "pitch": -7,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "Salon",
+                    "sceneId": "1",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },]
+                 
+        },
+     "4": {
+            "title": "Przedpokój",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "/assets/nowa-bud/spacer/140/korytarz_parter_fix.jpg",
+            "northOffset":140,
+            "hotSpots": [
+                {
+                    "pitch": -7,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "Salon",
+                    "sceneId": "1",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -7,
+                    "yaw": -20,
+                    "type": "scene",
+                    "text": "Kuchnia",
+                    "sceneId": "2",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -7,
+                    "yaw": 30,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "5",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -20,
+                    "yaw": 30,
+                    "type": "scene",
+                    "text": "Gabinet",
+                    "sceneId": "3",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -7,
+                    "yaw": 140,
+                    "type": "scene",
+                    "text": "Garaż",
+                    "sceneId": "12",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                 ]
+        },
+         "5": {
+            "title": "Korytarz na piętrze",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "/assets/nowa-bud/spacer/140/korytarz_pietro_final.jpg",
+            "northOffset": -20,
+            "hotSpots": [
+                {
+                    "pitch": -7,
+                    "yaw": 70,
+                    "type": "scene",
+                    "text": "Pokój 1",
+                    "sceneId": "6",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -7,
+                    "yaw": 20,
+                    "type": "scene",
+                    "text": "Łazienka na piętrze",
+                    "sceneId": "8",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                 {
+                    "pitch": -7,
+                    "yaw": 280,
+                    "type": "scene",
+                    "text": "Pokój 2",
+                    "sceneId": "7",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                 {
+                    "pitch": -20,
+                    "yaw": 220,
+                    "type": "scene",
+                    "text": "Salon",
+                    "sceneId": "1",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                ]
+                 
+        },
+          "6": {
+            "title": "Pokój 1",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "/assets/nowa-bud/spacer/140/double_room.jpg",
+            "northOffset": 75,
+            "hotSpots": [
+                {
+                    "pitch": -7,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "5",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                ]
+        },
+               "7": {
+            "title": "Pokój 2",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "/assets/nowa-bud/spacer/140/pokoj2.jpg",
+            "northOffset": 200,
+           "hotSpots": [
+                {
+                    "pitch": -7,
+                    "yaw": 210,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "5",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                ]
+        },
+          "8": {
+            "title": "Łazienka na piętrze",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "/assets/nowa-bud/spacer/140/lazienka_pierto_fix.jpg",
+            "northOffset": 20,
+           "hotSpots": [
+                {
+                    "pitch": -7,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "5",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                ]
+        },
+          "11": {
+            "title": "Łazienka",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "/assets/nowa-bud/spacer/140/toaleta.jpg",
+            "northOffset": 0,
+            "hotSpots": [
+                {
+                    "pitch": -7,
+                    "yaw": 75,
+                    "type": "scene",
+                    "text": "Salon",
+                    "sceneId": "2",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                ]
+        },
+        "12": {
+            "title": "Garaż",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "/assets/nowa-bud/spacer/140/garaz_small.jpg",
+            "northOffset": 40,
+            "hotSpots": [
+                {
+                    "pitch": -7,
+                    "yaw": 20,
+                    "type": "scene",
+                    "text": "Przedsionek",
+                    "sceneId": "4",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                ]
+        },
+        
+    }
+});
+
+</script>
